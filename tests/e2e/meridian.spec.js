@@ -10,8 +10,8 @@ test.describe('Meridian Components Inventory Dashboard', () => {
     // Check main title
     await expect(page.locator('h1')).toContainText('Catalyst Components');
 
-    // Check main cards are rendered
-    await expect(page.locator('.stats-grid')).toBeVisible();
+    // Check main KPI cards are rendered
+    await expect(page.locator('.kpi-grid')).toBeVisible();
 
     // Verify presence of navigation links
     await expect(page.locator('nav.nav-tabs')).toBeVisible();
@@ -25,7 +25,7 @@ test.describe('Meridian Components Inventory Dashboard', () => {
     await expect(page).toHaveURL(/\/inventory/);
 
     // Verify inventory table exists
-    await expect(page.locator('.inventory-table')).toBeVisible();
+    await expect(page.locator('.table-container')).toBeVisible();
   });
 
   test('should navigate to reports and display quarterly stats', async ({ page }) => {
