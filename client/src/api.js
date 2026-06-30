@@ -126,5 +126,10 @@ export const api = {
     }
     const response = await axios.get(`${API_BASE_URL}/reports/monthly-trends?${params.toString()}`)
     return response.data
+  },
+
+  async getPurchaseOrders() {
+    const response = await axios.get(`${API_BASE_URL}/purchase-orders`)
+    return response.data
   }
 }
